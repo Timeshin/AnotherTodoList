@@ -1,0 +1,18 @@
+@import "../../_variables/variables.scss";
+
+.sidebar {
+    width: 50px;
+    min-height: 100vh;
+    max-height: 100%;
+    background: $primary-color;
+    padding-top: 32px;
+    &-content {
+        @include primaryFlex(true, center);
+        height: 32px;
+        background: $second-primary-color;
+        img {
+            width: 16px;
+            height: 16px;
+        }
+    }
+}

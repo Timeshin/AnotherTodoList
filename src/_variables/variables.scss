@@ -1,0 +1,15 @@
+// colors
+$primary-color: #550DC9;
+$second-primary-color: #440BA0;
+$text-color: #373737;
+$error-color: #FF6363;
+$unactive-color: #A3A3A3;
+$border-color: #ECECEC;
+
+@mixin primaryFlex($jc-c, $jc-c-property:null) {
+    display: flex;
+    @if $jc-c == true {
+        justify-content: $jc-c-property;
+    }
+    align-items: center;
+}

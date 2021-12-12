@@ -1,0 +1,88 @@
+@import "../../_variables/variables.scss";
+
+.items-list {
+    height: 100%;
+    overflow-y: auto;
+    padding-right: 5px;
+    &::-webkit-scrollbar {
+        width: 5px;
+    }
+    
+    &::-webkit-scrollbar-thumb {
+        background: #AAAAAA;
+        border-radius: 5px;
+    }
+
+    &-qty {
+        font-size: 16px;
+        font-weight: 600;
+        margin-bottom: 16px;
+    }
+    &-elem {
+        box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.08);
+        padding: 16px 12px;
+        margin-bottom: 16px;
+        border-radius: 4px;
+        @include primaryFlex(true, space-between);
+        &-content {
+            @include primaryFlex(false);
+            gap: .5rem;
+            &-checkbox {
+                position: relative;
+                @include primaryFlex(false);
+    
+                input:checked {
+                    ~ .background:after {
+                        content: '\2713';
+                        color: #fff
+                    }
+                    ~ .background {
+                        position: absolute;
+                        @include primaryFlex(true, center);
+                        width: 100%;
+                        height: 100%;
+                        background: $primary-color;
+                        border-radius: 2.5px;
+                        border: 1px solid transparent;
+                        cursor: pointer;
+                    }
+                }
+    
+                input {
+                    width: 16px;
+                    height: 16px;
+                    cursor: pointer;
+                }
+            }
+        }
+        
+        &-title {
+            font-weight: 400;
+            &.completed {
+                text-decoration: line-through;
+                color: $unactive-color;
+            }
+        }
+    
+        &-icons {
+            @include primaryFlex(false);
+            gap: 1rem;
+    
+            & span {
+                cursor: pointer;
+            }
+    
+            .edit {
+                color: #5A7FFF
+            }
+    
+            .copy {
+                color: $unactive-color
+            }
+    
+            .trash {
+                color: $error-color
+            }
+        }
+    }
+}
