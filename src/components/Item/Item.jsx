@@ -15,6 +15,8 @@ const Item = ({id, title, completed}) => {
     const dispatch = useDispatch()
     const titleRef = useRef()
 
+    console.log("hello13")
+
     useEffect(() => {
         setCopiedText(title)
         editingItem.id === id ? setEdit(true) : setEdit(false)
