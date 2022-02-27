@@ -16,6 +16,7 @@ const Item = ({id, title, completed}) => {
     const titleRef = useRef()
 
     console.log("hello13")
+    console.log("hello123")
 
     useEffect(() => {
         setCopiedText(title)
