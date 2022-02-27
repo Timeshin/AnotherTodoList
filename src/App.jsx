@@ -16,6 +16,8 @@ function App() {
     dispatch(getTodos())
   }, [dispatch])
 
+  console.log("HELLO123")
+
   return (
     <>
       <Header/>
